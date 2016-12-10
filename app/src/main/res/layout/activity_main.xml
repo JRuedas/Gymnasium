@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.upm.ipo.gymnasium.MainActivity">
+
+    <Button
+        android:text="Planificación"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:id="@+id/buttonPlanificacion"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="3dp"
+        android:onClick="planificacion" />
+
+    <Button
+        android:text="Iniciar rutina"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginLeft="200dp"
+        android:id="@+id/buttonRutina"
+        android:layout_marginTop="3dp"
+        android:onClick="inicioRutina" />
+
+    <Button
+        android:text="Ejercicios"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:id="@+id/buttonEjercicios"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="200dp"
+        android:onClick="proximamente" />
+
+    <Button
+        android:text="Clases"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:id="@+id/buttonClases"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="200dp"
+        android:onClick="proximamente" />
+
+    <Button
+        android:text="Progreso"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:id="@+id/buttonProgreso"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="400dp"
+        android:onClick="proximamente" />
+
+    <Button
+        android:text="Ajustes"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:id="@+id/buttonAjustes"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="400dp"
+        android:onClick="proximamente" />
+</RelativeLayout>
