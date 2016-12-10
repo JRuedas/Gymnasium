@@ -11,18 +11,6 @@
     tools:context="com.upm.ipo.gymnasium.seleccion_datos_planificacion">
 
     <Button
-        android:text="X"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="26dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="46dp"
-        android:id="@+id/button" />
-
-    <Button
         android:text="Ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,77 +19,219 @@
         android:layout_alignParentEnd="true"
         android:layout_marginRight="18dp"
         android:layout_marginEnd="18dp"
-        android:id="@+id/button2" />
+        android:id="@+id/button2"
+        android:onClick="ok" />
+
+    <Button
+        android:text="X"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/button"
+        android:onClick="salir"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNombre"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Nombre:"
         android:ems="10"
-        android:id="@+id/editText"
-        android:layout_marginBottom="52dp"
-        android:layout_above="@+id/button"
+        android:id="@+id/nombreRutinaEditText"
+        android:textAlignment="center"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/tvNombre"
         android:layout_centerHorizontal="true" />
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="46dp"
-        android:id="@+id/spinner" />
 
     <TextView
         android:text="Objetivo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView2"
-        android:textSize="24sp" />
+        android:id="@+id/tvObjetivo"
+        android:textSize="24sp"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/nombreRutinaEditText"
+        android:layout_alignRight="@+id/tvNombre"
+        android:layout_alignEnd="@+id/tvNombre" />
 
-    <TextView
-        android:text="1"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView3"
-        android:id="@+id/textView4"
-        android:textSize="25sp"
-        android:layout_toLeftOf="@+id/textView2"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
-        android:layout_alignTop="@+id/textView3" />
+        android:id="@+id/spinner"
+        android:layout_below="@+id/tvObjetivo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginTop="42dp" />
 
     <TextView
         android:text="Dias/Semana"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
         android:id="@+id/textView3"
         android:textSize="25sp"
-        android:layout_above="@+id/textView2"
+        android:layout_marginBottom="120dp"
+        android:layout_above="@+id/button2"
         android:layout_alignRight="@+id/button2"
         android:layout_alignEnd="@+id/button2" />
 
-    <CheckBox
+    <TextView
+        android:text="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:layout_marginTop="30dp"
-        android:id="@+id/checkBox"
-        android:duplicateParentState="false"
-        android:checked="true" />
+        android:id="@+id/tvNumDias"
+        android:textSize="25sp"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignRight="@+id/nombreRutinaEditText"
+        android:layout_alignEnd="@+id/nombreRutinaEditText"
+        android:layout_marginTop="47dp"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
+
 
     <TextView
         android:text="Lunes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView5"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/checkBox"
-        android:layout_alignStart="@+id/checkBox" />
+        android:id="@+id/tvLunes"
+        android:textSize="19sp"
+        android:layout_alignBaseline="@+id/checkBoxLunes"
+        android:layout_alignBottom="@+id/checkBoxLunes"
+        android:layout_marginLeft="48dp" />
+
+    <TextView
+        android:text="Martes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMartes"
+        android:textSize="19sp"
+        android:layout_alignBaseline="@+id/checkBoxMartes"
+        android:layout_alignBottom="@+id/checkBoxMartes"
+        android:layout_marginLeft="40dp" />
+
+    <TextView
+        android:text="Miercoles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMiercoles"
+        android:textSize="19sp"
+        android:layout_alignBaseline="@+id/checkBoxMiercoles"
+        android:layout_alignBottom="@+id/checkBoxMiercoles"
+        android:layout_marginLeft="16dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxLunes"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/spinner"
+        android:layout_marginLeft="100dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxMiercoles"
+        android:layout_below="@+id/checkBoxMartes"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="100dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxMartes"
+        android:layout_below="@+id/checkBoxLunes"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="100dp"/>
+
+
+
+
+
+
+    <TextView
+        android:text="Jueves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvJueves"
+        android:textSize="19sp"
+        android:layout_alignBaseline="@+id/checkBoxLunes"
+        android:layout_alignBottom="@+id/checkBoxLunes"
+        android:layout_marginLeft="160dp" />
+
+    <TextView
+        android:text="Viernes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvViernes"
+        android:textSize="19sp"
+        android:layout_alignBaseline="@+id/checkBoxMartes"
+        android:layout_alignBottom="@+id/checkBoxMartes"
+        android:layout_marginLeft="157dp" />
+
+    <TextView
+        android:text="Sabado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSabado"
+        android:textSize="19sp"
+        android:layout_alignBaseline="@+id/checkBoxMiercoles"
+        android:layout_alignBottom="@+id/checkBoxMiercoles"
+        android:layout_marginLeft="157dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxJueves"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/spinner"
+        android:layout_marginLeft="220dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxViernes"
+        android:layout_below="@+id/checkBoxJueves"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="220dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxSabado"
+        android:layout_below="@+id/checkBoxViernes"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="220dp"/>
+
+
+    <TextView
+        android:text="Domingo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDomingo"
+        android:textSize="19sp"
+        android:layout_alignBaseline="@+id/checkBoxDomingo"
+        android:layout_alignBottom="@+id/checkBoxDomingo"
+        android:layout_marginLeft="255dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxDomingo"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/spinner"
+        android:layout_marginLeft="330dp" />
 </RelativeLayout>

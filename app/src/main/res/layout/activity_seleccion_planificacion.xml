@@ -16,7 +16,8 @@
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
-        android:id="@+id/buttonNuevo" />
+        android:id="@+id/buttonNuevo"
+        android:onClick="nueva" />
 
     <Button
         android:text="Modificar"
@@ -24,7 +25,8 @@
         android:layout_height="100dp"
         android:layout_marginTop="175dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/buttonModificar" />
+        android:id="@+id/buttonModificar"
+        android:onClick="modificar" />
 
     <Button
         android:text="Mis rutinas"
@@ -32,7 +34,8 @@
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="315dp"
-        android:id="@+id/buttonRutinas" />
+        android:id="@+id/buttonRutinas"
+        android:onClick="rutinas" />
 
     <Button
         android:text="Importar"
@@ -40,6 +43,7 @@
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="450dp"
-        android:id="@+id/buttonImportar" />
+        android:id="@+id/buttonImportar"
+        android:onClick="importar" />
 
 </RelativeLayout>
